@@ -84,6 +84,8 @@ void test_atVector_requestToLastElement() {
 
     pushBack(&v, 5);
     assert(&v.data[4] == atVector(&v, 4));
+
+    deleteVector(&v);
 }
 
 void test_back_oneElementInVector() {
@@ -98,6 +100,8 @@ void test_back_oneElementInVector() {
 
     pushBack(&v, 5);
     assert(&v.data[4] == back(&v));
+
+    deleteVector(&v);
 }
 
 void test_front_oneElementInVector() {
@@ -115,6 +119,8 @@ void test_front_oneElementInVector() {
 
     popBack(&v);
     assert(&v.data[0] == front(&v));
+
+    deleteVector(&v);
 }
 
 void test() {
